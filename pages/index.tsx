@@ -33,7 +33,7 @@ const Home: NextPage = () => {
             {host && (
               <>
                 <a href={`/api/movies`} target="_blank" rel="noreferrer">
-                  {protocol}//{host}/api/movies
+                  {`${protocol}//${host}`}/api/movies
                 </a>
                 <table>
                   <thead>
@@ -53,7 +53,7 @@ const Home: NextPage = () => {
                           target="_blank"
                           rel="noreferrer"
                         >
-                          {protocol}//{host}/api/movies?genre=komedie
+                          {`${protocol}//${host}`}/api/movies?genre=komedie
                         </a>
                       </td>
                     </tr>
@@ -66,7 +66,7 @@ const Home: NextPage = () => {
                           target="_blank"
                           rel="noreferrer"
                         >
-                          {protocol}//{host}/api/movies?year=1994
+                          {`${protocol}//${host}`}/api/movies?year=1994
                         </a>
                       </td>
                     </tr>
@@ -79,7 +79,7 @@ const Home: NextPage = () => {
             <h3>Detail filmu [GET]</h3>
             {host && (
               <a href={`/api/movies/1`} target="_blank" rel="noreferrer">
-                {protocol}//{host}/api/movies/{'{id}'}
+                {`${protocol}//${host}`}/api/movies/{'{id}'}
               </a>
             )}
           </article>
