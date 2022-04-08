@@ -50,10 +50,51 @@
   text-align: center;
 }
 
+.subTitle {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 3rem;
+}
+
 .description {
   margin: 4rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
+}
+
+.docs {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.docs h2 {
+  text-align: left;
+}
+
+.endpoint {
+  margin-top: 20px;
+}
+
+.endpoint h3 {
+  color: #0070f3;
+}
+
+.endpoint table {
+  margin-top: 10px;
+
+  text-align: left;
+  box-shadow: 0 0 0 2px #0070f3;
+  border-radius: 8px;
+  border-collapse: collapse;
+}
+.endpoint th {
+  background-color: #0070f3;
+  color: white;
+}
+.endpoint th,
+.endpoint td {
+  padding: 10px;
+  border-bottom: 1px solid #0070f3;
 }
 
 .code {
