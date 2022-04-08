@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css';
 import { useState, useEffect } from 'react';
 
 const Home: NextPage = () => {
-  const [host, setHost] = useState([]);
+  const [host, setHost] = useState('');
   useEffect(() => {
     setHost(window.location.host);
   }, []);
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
             <h3>Seznam filmů [GET]</h3>
             {host && (
               <>
-                <a href={`/api/movies`} target="_blank">
+                <a href={`/api/movies`} target="_blank" rel="noreferrer">
                   {host}/api/movies
                 </a>
                 <table>
@@ -46,7 +46,11 @@ const Home: NextPage = () => {
                       <td>genre</td>
                       <td>string</td>
                       <td>
-                        <a href={`/api/movies?genre=komedie`} target="_blank">
+                        <a
+                          href={`/api/movies?genre=komedie`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           {host}/api/movies?genre=komedie
                         </a>
                       </td>
@@ -55,7 +59,11 @@ const Home: NextPage = () => {
                       <td>year</td>
                       <td>number</td>
                       <td>
-                        <a href={`/api/movies?year=1994`} target="_blank">
+                        <a
+                          href={`/api/movies?year=1994`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           {host}/api/movies?year=1994
                         </a>
                       </td>
@@ -68,7 +76,7 @@ const Home: NextPage = () => {
           <article className={styles.endpoint}>
             <h3>Detail filmu [GET]</h3>
             {host && (
-              <a href={`/api/movies/1`} target="_blank">
+              <a href={`/api/movies/1`} target="_blank" rel="noreferrer">
                 {host}/api/movies/{'{id}'}
               </a>
             )}

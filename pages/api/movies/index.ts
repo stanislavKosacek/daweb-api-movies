@@ -4,7 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import movies from './movies.json';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const genre = req.query.genre ? req.query.genre : null;
+  const genre = req.query.genre ? String(req.query.genre) : null;
   const year = req.query.year ? Number(req.query.year) : null;
   simplifyData(movies);
 
@@ -28,8 +28,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-const simplifyData = (movies) => {
-  movies.forEach((movie) => {
+const simplifyData = (movies: Array<any>) => {
+  movies.forEach((movie: any) => {
     delete movie.description;
   });
 };
