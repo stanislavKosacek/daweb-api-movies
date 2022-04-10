@@ -7,7 +7,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const genre = req.query.genre ? String(req.query.genre) : null;
   const year = req.query.year ? Number(req.query.year) : null;
   const moviesSimplifyed: Array<any> = simplifyData(movies);
-
+  res.setHeader('Access-Control-Allow-Origin', '*');
   if (genre && year) {
     const filtered = moviesSimplifyed.filter((movie) => {
       return movie.genres.includes(genre.toLowerCase()) && movie.year === year;

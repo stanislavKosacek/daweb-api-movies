@@ -6,6 +6,7 @@ import movies from './movies.json';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const id = req.query.id ? Number(req.query.id) : null;
   let found = false;
+  res.setHeader('Access-Control-Allow-Origin', '*');
   if (id) {
     movies.forEach((movie) => {
       if (movie.id === id) {
